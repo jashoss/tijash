@@ -1,0 +1,161 @@
+/* Contenedor visible */
+.logosCarousel {
+    width: 100px;
+    max-height: 100vh;
+    overflow: hidden;
+    position: relative;
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+/* Contenedor que se mueve */
+.logosTrack {
+    display: flex;
+    flex-direction: column;
+    animation: scrollVertical 30s linear infinite;
+}
+
+/* Imágenes */
+.logoItem {
+    width: 100%;
+    height: auto;
+    padding: 10px 0;
+    object-fit: contain;
+}
+
+/* Animación infinita */
+@keyframes scrollVertical {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-50%); /* mueve una "página" completa */
+    }
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; 
+}
+
+
+.titlePage{
+    max-width: 65vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 10vw;
+}
+
+.longTexts{
+    font-size: 1.3em;
+}
+.separation {
+    width: 100vw; /* en vez de 110vw */
+    height: 20vh;
+    background-color: #181818;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.randomData{
+    display: flex; 
+    flex-direction: column;  
+    align-items: center;
+    transition: 0.5s;
+}
+.randomData:hover{
+    font-size: large;
+}
+
+
+.allSeasons{
+    max-width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    
+
+    background-color: #282828;
+
+    padding-top: 5vh;
+    padding-left: 10vw;
+    padding-right: 10vw;
+
+    padding-bottom: 15vh;
+}
+.cuadrosConInfo{
+    background-color: #181818;
+    width: 22vw;
+    height: 40vh;
+    border-radius: 20px;
+    border: solid 0.1px #565656;
+
+    display: flex;
+    flex-direction: column;
+    padding: 2vh;
+
+    position: relative;
+}
+.cuadrosConInfo.big{
+    width: 36vw;
+    height: 40vh;
+
+    margin-top: 2vh;
+    align-self: center;
+
+    justify-content: center;
+    align-items: center;
+}
+.cuadrosConInfo.large{
+    width: 75vw;
+    height: 60vh;
+    align-self: center;
+    margin-top: 2vh;
+    justify-content: center;
+    align-items: center;
+}
+.cuadrosConInfo.small{
+    width: 22vw;
+    height: 10vh;
+    
+    align-self: center;
+
+    justify-content: center;
+    align-items: center;
+}
+.cuadrosConInfo.square{
+    width: 45vw;
+    height: 40vw;
+
+    justify-content: center;
+    align-items: center;
+}
+.textPicks{
+    font-size: 1.3em;
+    margin: 0;
+    margin-top: 3vh;
+}
+
+.finalPage{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+
+.ball {
+    position: absolute;
+    width: 9vw;
+    height: auto;
+    will-change: transform;
+    user-select: none;
+    pointer-events: none;
+}
