@@ -145,28 +145,173 @@ function Home() {
                     <h1 style={{ margin: 0, fontSize: '5em'}}>Jugadores de la NBA</h1>
                     <h1 style={{ margin: 0 }}>(1996 - 2022)</h1>
                     <h2 style={{ marginBottom: 0, marginTop: '5vh' }}>Introducción</h2>
-                    <p className='longTexts'>Tarta no sólo es un pastel dulce golosina o una chica. Ahora también es el nombre de mi nueva herramienta que hace signos de arte textual . ≧^◡^≦ Puedes pedir Tarty hacer un texto grande y artistico para ti. Lo hará con mucho gusto, y lo que mas - tu texto será ta-a-an largo!.. Ж-D Estas son las cosas que hacen que mi Tarty sea una de las mas dulces y mas GRANDEs herramientas para transformar texto en símbolos.</p>
+                    <p className='longTexts'>Exploro un dataset de todos los jugadores que han jugado en la NBA en las temporadas 1996-2022. Cada jugador tiene varias columnas con las estadísticas que promedió en esa temporada, lo que permite analizar distintos aspectos de su desempeño, compararlos entre sí y estudiar tendencias a lo largo del tiempo. Con estos datos podemos identificar patrones de rendimiento, evaluar la evolución de jugadores o equipos, y generar visualizaciones que faciliten la comprensión de la información. Este proyecto busca combinar análisis estadístico y visualizaciones interactivas para extraer conclusiones significativas del desempeño en la NBA durante más de dos décadas.</p>
                 </div>
 
             </div>
 
             <div className='separation'>
-                <div className='randomData'>
-                    <h1 style={{ margin: 0 }}>Tamaño del dataset</h1>
-                    <p className='longTexts' style={{ margin: 0 }}>12844</p>
+                <div style={{width: '100%', justifyContent: 'space-around', alignItems: 'center', height: '20vh', display: 'flex'}}>
+                    <div className='randomData'>
+                        <h1 style={{ margin: 0 }}>Tamaño del dataset</h1>
+                        <p className='longTexts' style={{ margin: 0 }}>12844</p>
+                    </div>
+                    <div className='randomData'>
+                        <h1 style={{ margin: 0 }}>Jugadores analizados</h1>
+                        <p className='longTexts' style={{ margin: 0 }}>2551</p>
+                    </div>
+                    <div className='randomData'>
+                        <h1 style={{ margin: 0 }}>Temporadas analizadas</h1>
+                        <p className='longTexts' style={{ margin: 0 }}>26</p>
+                    </div>
+                    <div className='randomData'>
+                        <h1 style={{ margin: 0 }}>Variables por jugador</h1>
+                        <p className='longTexts' style={{ margin: 0 }}>21</p>
+                    </div>
                 </div>
-                <div className='randomData'>
-                    <h1 style={{ margin: 0 }}>Jugadores analizados</h1>
-                    <p className='longTexts' style={{ margin: 0 }}>2551</p>
-                </div>
-                <div className='randomData'>
-                    <h1 style={{ margin: 0 }}>Aquí otra cosa</h1>
-                    <p className='longTexts' style={{ margin: 0 }}>65249</p>
-                </div>
-                <div className='randomData'>
-                    <h1 style={{ margin: 0 }}>Temporadas analizadas</h1>
-                    <p className='longTexts' style={{ margin: 0 }}>26</p>
-                </div>
+                
+
+                <h1 style={{ margin: 0, alignSelf: 'flex-start', marginLeft: '7vw'}}>Variables de cada jugador</h1>
+                <div class="table-wrapper">
+                    <table class="var-table">
+                        <thead>
+                            <tr>
+                                <th>Nombre de la variable</th>
+                                <th>Tipo</th>
+                                <th>Descripción</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>player_name</td>
+                                <td class="cat">Categórica</td>
+                                <td>Nombre del jugador</td>
+                            </tr>
+
+                            <tr>
+                                <td>team_abbreviation</td>
+                                <td class="cat">Categórica</td>
+                                <td>Siglas del equipo</td>
+                            </tr>
+
+                            <tr>
+                                <td>age</td>
+                                <td class="num">Numérica</td>
+                                <td>Edad del jugador</td>
+                            </tr>
+
+                            <tr>
+                                <td>player_height</td>
+                                <td class="num">Numérica</td>
+                                <td>Altura del jugador (cm)</td>
+                            </tr>
+
+                            <tr>
+                                <td>player_weight</td>
+                                <td class="num">Numérica</td>
+                                <td>Peso del jugador (kg)</td>
+                            </tr>
+
+                            <tr>
+                                <td>college</td>
+                                <td class="cat">Categórica</td>
+                                <td>Universidad de procedencia</td>
+                            </tr>
+
+                            <tr>
+                                <td>country</td>
+                                <td class="cat">Categórica</td>
+                                <td>País de nacimiento</td>
+                            </tr>
+
+                            <tr>
+                                <td>draft_year</td>
+                                <td class="cat">Categórica</td>
+                                <td>Año del draft</td>
+                            </tr>
+
+                            <tr>
+                                <td>draft_round</td>
+                                <td class="num">Numérica</td>
+                                <td>Ronda en la que fue elegido</td>
+                            </tr>
+
+                            <tr>
+                                <td>draft_number</td>
+                                <td class="num">Numérica</td>
+                                <td>Posición general del draft</td>
+                            </tr>
+
+                            <tr>
+                                <td>gp</td>
+                                <td class="num">Numérica</td>
+                                <td>Partidos jugados</td>
+                            </tr>
+
+                            <tr>
+                                <td>pts</td>
+                                <td class="num">Numérica</td>
+                                <td>Puntos por partido</td>
+                            </tr>
+
+                            <tr>
+                                <td>reb</td>
+                                <td class="num">Numérica</td>
+                                <td>Rebotes por partido</td>
+                            </tr>
+
+                            <tr>
+                                <td>ast</td>
+                                <td class="num">Numérica</td>
+                                <td>Asistencias por partido</td>
+                            </tr>
+
+                            <tr>
+                                <td>net_rating</td>
+                                <td class="num">Numérica</td>
+                                <td>Eficiencia neta</td>
+                            </tr>
+
+                            <tr>
+                                <td>oreb_pct</td>
+                                <td class="num">Numérica</td>
+                                <td>Porcentaje de rebotes ofensivos</td>
+                            </tr>
+
+                            <tr>
+                                <td>dreb_pct</td>
+                                <td class="num">Numérica</td>
+                                <td>Porcentaje de rebotes defensivos</td>
+                            </tr>
+
+                            <tr>
+                                <td>usg_pct</td>
+                                <td class="num">Numérica</td>
+                                <td>Porcentaje de uso</td>
+                            </tr>
+
+                            <tr>
+                                <td>ts_pct</td>
+                                <td class="num">Numérica</td>
+                                <td>Eficiencia real de tiro</td>
+                            </tr>
+
+                            <tr>
+                                <td>ast_pct</td>
+                                <td class="num">Numérica</td>
+                                <td>Porcentaje de asistencias</td>
+                            </tr>
+
+                            <tr>
+                                <td>season</td>
+                                <td class="cat">Categórica</td>
+                                <td>Temporada correspondiente</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </div>
+
             </div>
 
             <div className='allSeasons'>
@@ -293,28 +438,32 @@ function Home() {
                     <div>
                         <h3 style={{  fontSize: '1.7em', marginBottom: '1vh', marginLeft: '2vw'}}>Alturas en los jugadores (interacional)</h3>
                         <div className='cuadrosConInfo big'>
-                            <img src={alturasBox} alt="fisicos" style={{width: '38vw', height: 'auto'}}/>
+                            <img src={alturasBox} alt="fisicos" style={{width: '36vw', height: 'auto', alignSelf: 'flex-start'}}/>
+                            <p>Se puede ver la diferencia de altiuras que hay los países, aunque muchos comparten la misma media, podemos ver algunas peculiaridades en los outliers.</p>
                         </div>
                     </div>
 
                     <div>
                         <h3 style={{  fontSize: '1.7em', marginBottom: '1vh', marginLeft: '2vw'}}>Eficiencia por partido (internacional)</h3>
                         <div className='cuadrosConInfo big'>
-                            <img src={eficienciaBox} alt="fisicos" style={{width: '38vw', height: 'auto'}}/>
+                            <img src={eficienciaBox} alt="fisicos" style={{width: '36vw', height: 'auto', alignSelf: 'flex-start'}}/>
+                            <p>Esta gráfica es interestante porque toma las eficiencias de los países, e igual, la mayoría tiene su media en el mismo rango pero EU es el único que tiene muchos outliers.</p>
                         </div>
                     </div>
 
                     <div>
                         <h3 style={{  fontSize: '1.7em', marginBottom: '1vh', marginLeft: '2vw'}}>Puntos por partido (internacional)</h3>
                         <div className='cuadrosConInfo big'>
-                            <img src={puntosPPBox} alt="fisicos" style={{width: '38vw', height: 'auto'}}/>
+                            <img src={puntosPPBox} alt="fisicos" style={{width: '36vw', height: 'auto', alignSelf: 'flex-start'}}/>
+                            <p>Aquí los datos varían un poco más y de nuevo EU vuelve a tomar un rol importante al tener muchos jugadores en outliers positivos.</p>
                         </div>
                     </div>
 
                     <div>
                         <h3 style={{  fontSize: '1.7em', marginBottom: '1vh', marginLeft: '2vw'}}>Rebotes por partido (internacional)</h3>
                         <div className='cuadrosConInfo big'>
-                            <img src={rebotesPPBox} alt="fisicos" style={{width: '38vw', height: 'auto'}}/>
+                            <img src={rebotesPPBox} alt="fisicos" style={{width: '36vw', height: 'auto', alignSelf: 'flex-start'}}/>
+                            <p>Varían los datos parecido a los puntos, pero Francia tiene un poco más de precencia, podemos deducir que es por la altura de los jugadores (como está representado en la gráfica de alturas).</p>
                         </div>
                     </div>
 
@@ -326,7 +475,11 @@ function Home() {
             </div>
 
             <div className='finalPage'>
-                <h1 style={{ margin: 0, fontSize: '3.5em', alignSelf: 'flex-start', marginLeft: '10vw'}}>Universidades en diferentes equipos</h1>
+                <div>
+                    <h1 style={{ margin: 0, fontSize: '3.5em', alignSelf: 'flex-start', marginLeft: '10vw'}}>Universidades en diferentes equipos</h1>
+                    <p className='longTexts' style={{ alignSelf: 'flex-start', marginLeft: '10vw', marginRight: '10vw'}}>Esta heatmap muestra la relación entre la cantidad de jugadores que salen de una universidad y se van directo a un equipo específico. Cada frame es una temporada diferente. Las universidades que están hasta arriba han tenido más jugadores que en algún punto juegan en la NBA que las universidades de abajo.</p>
+                </div>
+
                 <video
                     src={heatMapS}
                     autoPlay

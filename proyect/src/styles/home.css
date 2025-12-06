@@ -54,10 +54,10 @@ html, body {
 }
 .separation {
     width: 100vw; /* en vez de 110vw */
-    height: 20vh;
     background-color: #181818;
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
 }
 .randomData{
@@ -158,4 +158,64 @@ html, body {
     will-change: transform;
     user-select: none;
     pointer-events: none;
+}
+
+
+/**
+
+    estilo de la tabla
+
+*/
+/* Tabla general */
+/* Contenedor con scroll */
+.table-wrapper {
+    width: 85%;
+    height: 50vh;         /* se ve máximo la mitad de la pantalla */
+    margin: 20px auto;
+    overflow-y: auto;     /* scroll vertical */
+    border-radius: 6px;
+    border: 0.3px solid #888888;
+
+    margin-bottom: 7vh;
+}
+
+/* Tabla */
+.var-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+}
+
+/* Encabezado */
+.var-table thead tr {
+    background-color: #1d1d1d;
+    color: rgb(165, 165, 165);
+    position: sticky;
+    top: 0;
+}
+
+/* Celdas */
+.var-table th,
+.var-table td {
+    padding: 12px;
+    border-bottom: 0.3px solid #888888;
+    text-align: left;
+    color: rgb(165, 165, 165);
+}
+
+/* Hover */
+.var-table tbody tr:hover {
+    background-color: #1d1d1d;
+}
+
+/* Colores por tipo */
+.cat {
+    color: #1a73e8c2 !important;;
+    font-weight: bold;
+}
+
+.num {
+    color: #e67e22c2 !important;;
+    font-weight: bold;
 }
